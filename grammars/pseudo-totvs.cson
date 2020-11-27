@@ -4,11 +4,61 @@
 'scopeName': 'source.pseudo-totvs'
 'name': 'PseudoTotvs'
 'fileTypes': [
-  'extension'
+  'ttt'
 ]
 'patterns': [
   {
     'match': '^\\s*@@.*$'
     'name': 'comment'
   }
+  {
+    name = 'keyword.control.pseudo-totvs'
+    match = '\\b(se|entao|senao|fimse)\\b'
+  }
+  {
+    name = 'meta.function.pseudo-totvs'
+    match = '\\b(BUSCACAMPOMATRICULA|BUSCACAMPOPL|TRUNCVALOR|GRAVACAMPOPL|GRAVACAMPOETAPA|ARREDVALOR|GRAVACAMPOMATRICULA|BUSCACAMPOETAPA|SOMANOTAPROVA|MAX|FRAC|INT)\\b'
+  }
+  {
+    name = 'meta.function.sql.pseudo-totvs'
+    match = '\\b(EXECSQL|RESULTSQL)\\b'
+  }
+  {
+    name = 'storage.type.pseudo-totvs'
+    match = '\\b(DECL|SETVAR|ATRIBUI)\\b'
+  }
+  {
+    name = 'punctuation.terminator.statement.js'
+    match = '\;'
+  }
+  {
+    name = 'meta.delimiter.object.comma.js'
+    match = ','
+  }
+  {
+    name = 'meta.brace.round.js'
+    match = '\\(|\\)'
+	}
+  {	name = 'string.quoted.single.js'
+			begin = "'"
+			end = "'"
+			beginCaptures = { 0 = { name = 'punctuation.definition.string.begin.js' } }
+			endCaptures = { 0 = { name = 'punctuation.definition.string.end.js' } }
+			patterns = (
+				{	name = 'constant.character.escape.js'
+					match = '\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+				}
+			)
+		}
+		{	name = 'string.quoted.double.js'
+			begin = '"'
+			end = '"'
+			beginCaptures = { 0 = { name = 'punctuation.definition.string.begin.js' } }
+			endCaptures = { 0 = { name = 'punctuation.definition.string.end.js' } }
+			patterns = (
+				{	name = 'constant.character.escape.js'
+					match = '\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)'
+				}
+			)
+		}
 ]
