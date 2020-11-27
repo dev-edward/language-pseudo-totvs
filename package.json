@@ -1,12 +1,12 @@
 {
   "name": "language-pseudo-totvs",
   "version": "0.0.0",
-  "description": "A short description of your language package",
+  "description": "Realce da sintaxe para o pseudo código usado nas formulas da totvs. Inicialmente para ser usado no Atom, mas compatíveis com outros editores de texto.",
   "keywords": [
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/atom/language-pseudo-totvs",
+  "repository": "https://github.com/edward-d3v/language-pseudo-totvs/",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
